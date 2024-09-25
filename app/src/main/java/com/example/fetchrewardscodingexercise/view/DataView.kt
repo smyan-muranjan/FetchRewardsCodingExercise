@@ -32,7 +32,11 @@ fun DataView(
     ) { innerPadding ->
         Column(modifier = modifier.padding(innerPadding)) {
             if (data == null) {
-                Text(text = "Fetching data...", style = MaterialTheme.typography.bodyLarge)
+                Text(
+                    text = "Fetching data...",
+                    style = MaterialTheme.typography.bodyLarge,
+                    color = colorResource(id = R.color.app_purple)
+                )
             } else {
                 DataListView(data)
             }
